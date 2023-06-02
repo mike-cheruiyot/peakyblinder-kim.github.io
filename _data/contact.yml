@@ -17,7 +17,7 @@
 -
   type: hackthebox
   icon: 'fas fa-cube'
-  url: 'https://www.hackthebox.eu/profile/69842'
+  # url: 'https://www.hackthebox.eu/profile/69842'
 
 #  type: rss
 #  icon: 'fas fa-rss'
@@ -31,7 +31,14 @@
 -
    type: LinkedIn
    icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-   url: 'https://www.linkedin.com/in/mayank-deshmukh-162919115'                  # Fill with your Linkedin homepage
+   url: 'https://www.linkedin.com/in/mike-cheruiyot-1a42121a2/'                  # Fill with your Linkedin homepage
 # -
 #   icon: 'fab fa-stack-overflow'
 #   url:  ''                  # Fill with your stackoverflow homepage
+  type: tryhackme
+  icon: 'fa-solid fa-tryhackme'
+  https://tryhackme.com/p/PeakyBlinder1'
+-
+  type: twitter
+  icon: 'fab fa-twitter'
+  https://twitter.com/Peakyblynder
