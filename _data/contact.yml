@@ -29,15 +29,17 @@
 #   url:  ''                  # Fill with your mastodon account page
 # -
 -
-   type: LinkedIn
-   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-   url: 'https://www.linkedin.com/in/mike-cheruiyot-1a42121a2/'                  # Fill with your Linkedin homepage
+  type: LinkedIn
+  icon: 'fab fa-linkedin'
+  url: 'https://www.linkedin.com/in/mike-cheruiyot-1a42121a2/'
+# Fill with your Linkedin homepage
 # -
 #   icon: 'fab fa-stack-overflow'
 #   url:  ''                  # Fill with your stackoverflow homepage
-  type: tryhackme
+- type: tryhackme
   icon: 'fa-solid fa-tryhackme'
-  https://tryhackme.com/p/PeakyBlinder1'
+  url: 'https://tryhackme.com/p/PeakyBlinder1'
+
 -
   type: twitter
   icon: 'fab fa-twitter'
