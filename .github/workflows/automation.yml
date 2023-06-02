@@ -1,5 +1,5 @@
 # This is a workflow to deploy tags and update lastmod via automation
-# Author : ColdFusionX
+# Author: ColdFusionX
 
 name: CI
 
@@ -7,9 +7,9 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
-      - uses: ruby/setup-ruby
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.6.x'
 
@@ -35,4 +35,4 @@ jobs:
           
       - name: Lastmod script
         run: |
-          bash _scripts/sh/dump_lastmod.sh        
+          bash _scripts/sh/dump_lastmod.sh
