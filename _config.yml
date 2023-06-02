@@ -13,7 +13,7 @@ title: PeakyBlinder                          # the main title
 tagline: CTF Player | Pentester | InfoSec Enthusiast # it will display as the sub-title
           
 description: >-                        # used by seo meta and the atom feed
-  Realm of Knowledge
+  Discover cool techniques
 
 # Replace with the website url, e.g. 'https://username.github.io'
 url: 'https://peakyblinder-kim.github.io/'
@@ -23,13 +23,13 @@ author: Mike Cheruiyot               # change to your full name
 avatar: /assets/img/sample/profile.jpg   # support internet resources
 
 github:
-  username: PeakyBlinder            # change to your github username
+  username: peakyBlinder-kim           # change to your github username
 
 twitter:
   username: Peakyblynder            # change to your twitter username
 
 social:
-  name: Mayank Deshmukh                  # it will shows as the copyright owner in Footer
+  name: Mike Cheruiyot                  # it will shows as the copyright owner in Footer
   email: cheruiyotm122@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -64,7 +64,7 @@ google_analytics:
 
 disqus:
   comments: true  # boolean type, the global switch for posts comments.
-  shortname: 'coldfx'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  shortname: 'peaky'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 plugins:
   - jekyll-seo-tag
