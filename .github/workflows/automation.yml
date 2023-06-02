@@ -31,9 +31,15 @@ jobs:
 
       # Runs Publish & Lastmod script
       - name: Publish script
+        env:
+          ACCESS_TOKEN: ${{ secrets.TOKEN }}
         run: |
-          bash tools/publish.sh
-
+          git config user.name "peakyblinder-kim"
+          git config user.email "cheruiyotm122@gmail.com"
+          git add .
+          git commit -m "Publish changes"
+          git push https://github.com/peakyblinder-kim/peakyblinder-kim.github.io.git HEAD:refs/heads/master 
+           
       - name: Lastmod script
         run: |
           bash _scripts/sh/dump_lastmod.sh
