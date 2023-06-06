@@ -8,8 +8,7 @@ link: https://tryhackme.com/room/ultratech1
 image: /assets/img/Posts/ut.png
 ---
 
-##
-`INTRODUCTION`
+## `INTRODUCTION`
 
 UltraTech is a medium level rated room that gives a perspective of security practices. It explores enumeration, subdomain discovery and Privilege escalation. Let's begin.
 ## `Initial recon - Port scanning`
