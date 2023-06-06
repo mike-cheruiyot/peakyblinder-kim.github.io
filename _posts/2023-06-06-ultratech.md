@@ -140,7 +140,7 @@ The directory, http://10.10.105.45:31331/js has some interesting endpoints.
 	    console.log('API Error')
 ```
 This line `const url = `http://${getAPIURL()}/ping?ip=${window.location.hostname}` is interesting. We can query the API by altering the request.
-We try some commands which looks something like this
+We try some commands
 ```shell
 http://10.10.103.195:8081/ping?ip=ls
 
