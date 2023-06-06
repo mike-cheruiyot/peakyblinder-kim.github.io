@@ -8,12 +8,11 @@ link: https://tryhackme.com/room/ultratech1
 image: /assets/img/Posts/ut.png
 ---
 
-###
+##
 `INTRODUCTION`
 
 UltraTech is a medium level rated room that gives a perspective of security practices. It explores enumeration, subdomain discovery and Privilege escalation. Let's begin.
-## `Initial recon`
-### `Port scanning`
+## `Initial recon - Port scanning`
 
 We start off with an nmap scan to identify open ports and the services thy are running.
 
@@ -80,13 +79,23 @@ ftp>
 It didnt go through.
 Lets visit port 31331 (http://10.10.105.45:31331/)
 
-![website] (/assets/img/Posts/3131.png)
+![website](/assets/img/Posts/3131.png)
 
 
-We proceed to fuzz for directories
-We are aiming to establish the api routes
+
 Which GNU/Linux distribution seems to be used?
+```shell
+Ubuntu
+```
 The software using the port 8081 is a REST api, how many of its routes are used by the web application?
+To answer this we launch burpsuite to capture the traffic.
+After intercepting the request we forward the request it terminates after hitting two endpoints.
+
+```shell
+http://10.10.134.175:8081/favicon.ico
+http://10.10.134.175:8081/
+```
+The answer it 2 routes.
 
 ### `Subdomain discovery`
 Start a directory scan using ffuf
@@ -102,7 +111,7 @@ Back to the scan and something is cooking
 ```
 The directory, http://10.10.105.45:31331/js has some interesting endpoints.
 
-![website] /assets/img/Posts/ut.png
+![website](/assets/img/Posts/dir.png)
 
 
 ### `Vulnerable parameter discovery`
@@ -231,8 +240,8 @@ drwx------ 6 root root 4096 Mar 22  2019 ..
 -rw------- 1 root root 1675 Mar 22  2019 id_rsa
 -rw-r--r-- 1 root root  401 Mar 22  2019 id_rsa.pub
 # cat .ssh/id_rsa
-# cat .ssh/id_rsa
+-----BEGIN RSA PRIVATE KEY-----
 ```
 There you have it.
-HHAPPY LEARNING! ♥
+HAPPY LEARNING! ♥
 
