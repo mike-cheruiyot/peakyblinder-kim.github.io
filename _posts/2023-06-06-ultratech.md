@@ -76,7 +76,7 @@ ftp: Login failed
 ftp> 
 ```
 It didnt go through.
-Lets visit port 31331 (http://10.10.105.45:31331/)
+Lets visit port 31331 `(http://10.10.105.45:31331/)`
 
 ![website](/assets/img/Posts/3131.png)
 
