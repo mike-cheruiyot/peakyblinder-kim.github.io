@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "UltraTech — Writeup"
-date: 2023-06-02 
+date: 2023-06-06 
 categories: [Tryhackme,Linux Machines]
 tags: [tryhackme, security, pentest, enumeration, web ultratech1]
 link: https://tryhackme.com/room/ultratech1
