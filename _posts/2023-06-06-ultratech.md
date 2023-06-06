@@ -58,13 +58,13 @@ Apache
 ```
 
 The scan answers the above questions. As always, always explore the target.
-upon visiting http://10.10.105.45:8081/ we find it uses an api 
+upon visiting `http://10.10.105.45:8081/` we find it uses an api 
 ```shell
 UltraTech API v0.1.3
 ```
 Now it gets interesing.
 
-We have an ftp service on port 21. Let's check that out. Always check the port for any anopnymous login. 
+We have an `ftp` service on `port 21`. Let's check that out. Always check the port for any anopnymous login. 
 ```shell
 ftp anonymous@10.10.105.45
 Connected to 10.10.105.45.
