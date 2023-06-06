@@ -14,4 +14,4 @@ Hi, I'm Mike Cheruiyot,an IT practiioner in Kenya. I an ethical hacker primarily
 
 If you're interested in contacting me, LinkedIn and Twitter are good avenues or shoot me an email.
 
-<a href="https://bmc.link/PeakyBlinder" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://bmc.link/PeakyBlynder" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
