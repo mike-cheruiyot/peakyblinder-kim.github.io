@@ -8,6 +8,7 @@ link: https://tryhackme.com/room/dailybugle
 image: /assets/img/Posts/buggle.png
 ---
 
+
 ## `INTRODUCTION`
 
 This room explores joomla sql misconfigurations and how this can lead to exploitation through privilege escalation
@@ -138,7 +139,7 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed.  
 ```
 ## User enumeration
-We have password and username
+We have password and username.
 Using the credentials, we login to the dashboard.
 
 ![website](/assets/img/Posts/dash.png)

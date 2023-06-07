@@ -13,7 +13,7 @@ image: /assets/img/Posts/ut.png
 UltraTech is a medium level rated room that gives a perspective of security practices. It explores enumeration, subdomain discovery and Privilege escalation. Let's begin.
 ## `Initial recon - Port scanning`
 
-We start off with an nmap scan to identify open ports and the services thy are running.
+We start off with an nmap scan to identify open ports and the services they are running.
 
 ```shell
 nmap -sC -sV -p- 10.10.105.45 -o nmap.out
