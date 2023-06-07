@@ -232,7 +232,7 @@ user.txt
 ```
 We have the user flag but we can't do much with the priliges we have.
 
-## Check User commands
+## Check Possible User commands
 
 Let's check  commands that we can execute as sudo.
 ```shell
