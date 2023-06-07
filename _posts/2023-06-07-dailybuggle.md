@@ -248,7 +248,7 @@ User jjameson may run the following commands on dailybugle:
 ```
 `(ALL) NOPASSWD: /usr/bin/yum`
 
-## Binary Exploitation
+## Privilege Escalation
 
 We head to GTFOBINS https://gtfobins.github.io/gtfobins/yum/
 
