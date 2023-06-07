@@ -206,7 +206,7 @@ tmp
 web.config.txt
 ```
 
-`configuratuon.php` has some interesting information for us.
+`configuration.php` has some interesting information for us.
 ```shell
 public $host = 'localhost';
         public $user = 'root';
@@ -247,6 +247,8 @@ User jjameson may run the following commands on dailybugle:
 
 ```
 `(ALL) NOPASSWD: /usr/bin/yum`
+"NOPASSWD: /usr/bin/yum" in the sudoers file grants the specified user or group the ability to run the "yum" command without being prompted for a password when using the "sudo" command. Admnistrators usually leave it this way so as to avoid interruptions when executing repetitive tasks.
+However, in situations where an attacker gains access, they can use this to obtain more control of a machine/server.
 
 ## Privilege Escalation
 
