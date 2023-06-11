@@ -11,7 +11,7 @@ image: /assets/img/Posts/buggle.png
 
 ## INTRODUCTION
 
-This room explores joomla sql misconfigurations and how this can lead to exploitation through privilege escalation
+This TryHackme room explores joomla sql misconfigurations and how this can lead to exploitation through privilege escalation. You can check it out here. https://tryhackme.com/room/dailybugle
 
 ## Initial recon - Port scanning
 
