@@ -16,7 +16,7 @@ LASTMOD=false
 git config user.email "cheruiyotm122@gmail.com"
 git config user.name "peakyblinder-kim"
 
-WORK_DIR="$(dirname $(realpath "$0"))"
+WORK_DIR="$(dirname $(dirname $(realpath "$0")))"
 
 check_status() {
   local _change=$(git status . -s)
