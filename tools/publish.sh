@@ -13,7 +13,7 @@ CATEGORIES=false
 TAGS=false
 LASTMOD=false
 
-git config user.email "cheruiyotm122@gmail.com.ch"
+git config user.email "cheruiyotm122@gmail.com"
 git config user.name "peakyblinder-kim"
 
 WORK_DIR="$(dirname $(dirname $(realpath "$0")))"
