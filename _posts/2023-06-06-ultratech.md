@@ -96,7 +96,7 @@ http://10.10.134.175:8081/
 ```
 The answer it 2 routes.
 
-### `Subdomain discovery`
+### `Directory discovery`
 Start a directory scan using ffuf
 ```shell
 ffuf -u http://10.10.105.45:31331/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
