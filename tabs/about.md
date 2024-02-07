@@ -1,5 +1,5 @@
 ---
-title: Welcome to PeakyBlinder's Dome
+title: Welcome to Mike Cheruiyot's Blog
 
 # The About page
 # v2.0
